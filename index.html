@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SuperDoc footer text box repro</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; }
+      header { padding: 8px 12px; border-bottom: 1px solid #ddd; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+      #status { font-weight: 600; }
+      #editor { height: calc(100vh - 48px); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <label>
+        Fixture
+        <select id="fixture">
+          <option value="A-textbox-nowrap-in-pct-table.docx">A: wrap="none" text box in a pct-width table cell (fails)</option>
+          <option value="C-textbox-nowrap-in-dxa-table.docx">C: wrap="none" text box in a fixed-width table cell (fails)</option>
+          <option value="B-textbox-nowrap-no-table.docx">B: wrap="none" text box, no table (works)</option>
+          <option value="D-textbox-square-in-pct-table.docx">D: wrap="square" text box in a table cell (works)</option>
+        </select>
+      </label>
+      <span id="status">loading…</span>
+    </header>
+    <div id="editor"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
